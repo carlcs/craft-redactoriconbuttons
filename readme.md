@@ -25,7 +25,7 @@ Another icon file with icons from the [Google Material icon set][2] is included 
 The plugin is pre-configured for Redactors default buttons. To customize it, create a new [plugin configuration file][4] in the craft/config/ folder called redactoriconbuttons.php, which returns an array of settings.
 
 - **`iconMapping`** ([see defaults][5]) – Maps buttons to icons. The setting expects an array of key-value pairs that map a button’s index (inspect the “rel” attribute in the toolbar!) to the symbol ID of an icon in the SVG sprite.
-- **`iconFile`** (default `null`) – The path to a SVG sprite containing icons for the toolbar. You can use [environment variables][6].
+- **`iconFile`** (default `null`) – The path to a SVG sprite containing icons for the toolbar. You can use [environment variables][6]. If this setting is set to `null`, the plugin falls back to the [default icons](#icon-sets).
 - **`ieShim`** (default `true`) – Adds external spritemap support for IE9+ and Edge 12.
 
 ## Requirements
