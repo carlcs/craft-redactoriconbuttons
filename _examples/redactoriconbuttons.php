@@ -26,7 +26,8 @@ return [
     ],
 
     // The path to a SVG sprite containing icons for the toolbar. You can use
-    // environment variables.
+    // environment variables. If this setting is set to null, the plugin falls
+    // back to the default icons.
     'iconFile' => '/assets/icons/google-material.svg',
 
     // Adds external spritemap support for IE9+ and Edge 12.
