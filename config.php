@@ -34,6 +34,9 @@ return [
         'mark' => 'marked',
         'nobr' => 'nobreak',
         'remove' => 'removestyles',
+
+        // Footnotes plugin
+        'footnote' => 'footnote',
     ],
     'iconFile' => null,
     'ieShim' => true,
