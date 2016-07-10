@@ -19,9 +19,9 @@ return [
         'fullscreen' =>'fullscreen',
 
         // Inline Style plugin example buttons
-        'style' => 'ellipsis',
+        'style' => 'background',
         'color' => 'color',
-        'align' => 'alignment',
+        'align' => 'align-left',
         'sup' => 'superscript',
         'sub' => 'subscript',
         'q' => 'quote',
@@ -35,8 +35,9 @@ return [
         'nobr' => 'nobreak',
         'remove' => 'removestyles',
 
-        // Footnotes plugin
+        // Other plugins
         'footnote' => 'footnote',
+        'clips' => 'clips',
     ],
     'iconFile' => null,
     'ieShim' => true,
