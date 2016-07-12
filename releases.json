@@ -1,5 +1,13 @@
 [
   {
+    "version": "1.0.1",
+    "downloadUrl": "https://github.com/carlcs/craft-redactoriconbuttons/archive/v1.0.1.zip",
+    "date": "2016-07-12T12:00:00+01:00",
+    "notes": [
+      "[Improved] To use a different icon-set you can now upload a SVG sprite named icons.svg into craft/config/redactoriconbuttons/ and Redactor Icon Buttons picks it up automatically."
+    ]
+  },
+  {
     "version": "1.0.0",
     "downloadUrl": "https://github.com/carlcs/craft-redactoriconbuttons/archive/v1.0.0.zip",
     "date": "2016-07-11T09:00:00+01:00",
