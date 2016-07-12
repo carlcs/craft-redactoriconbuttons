@@ -2,9 +2,6 @@
 
 /**
  * craft/config/redactoriconbuttons.php
- *
- * The google-material.svg example SVG sprite contains Google Material Icons
- * created with the Icomoon App https://icomoon.io/app
  */
 return [
     // Maps buttons to icons. The setting expects an array of key-value pairs
@@ -24,11 +21,6 @@ return [
         'horizontalrule' => 'remove',
         'fullscreen' => 'fullscreen',
     ],
-
-    // The path to a SVG sprite containing icons for the toolbar. You can use
-    // environment variables. If this setting is set to null, the plugin falls
-    // back to the default icons.
-    'iconFile' => '/assets/icons/google-material.svg',
 
     // Adds external spritemap support for IE9+ and Edge 12.
     'ieShim' => true,

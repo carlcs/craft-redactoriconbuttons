@@ -63,6 +63,16 @@ class RedactorIconButtonsPlugin extends BasePlugin
         }
     }
 
+    /**
+     * Registers resource paths for requests starting with config/redactoriconbuttons/.
+     */
+    public function getResourcePath($path)
+    {
+        if (strncmp($path, 'config/redactoriconbuttons/', 27) == 0) {
+            return craft()->path->getConfigPath().'redactoriconbuttons/'.substr($path, 27);
+        }
+    }
+
     // Protected Methods
     // =========================================================================
 
@@ -76,9 +86,13 @@ class RedactorIconButtonsPlugin extends BasePlugin
 
         $config['iconMapping'] = craft()->config->get('iconMapping', 'redactoriconbuttons');
 
-        if (craft()->config->get('iconFile', 'redactoriconbuttons')) {
-            $url = craft()->config->get('iconFile', 'redactoriconbuttons');
-            $config['iconFile'] = craft()->config->parseEnvironmentString($url);
+        $iconAdminPath = craft()->path->getConfigPath().'redactoriconbuttons/icons.svg';
+        $iconPublicPath = craft()->config->get('iconFile', 'redactoriconbuttons');
+
+        if (IOHelper::fileExists($iconAdminPath)) {
+            $config['iconFile'] = UrlHelper::getResourceUrl('config/redactoriconbuttons/icons.svg');
+        } elseif ($iconPublicPath) {
+            $config['iconFile'] = craft()->config->parseEnvironmentString($iconPublicPath);
         } else {
             $config['iconFile'] = UrlHelper::getResourceUrl('redactoriconbuttons/icons/redactor-i.svg');
         }
